@@ -13,6 +13,6 @@ app.use("/curriculo", routes.curriculo);
 
 const PORT = 3000;
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync().then(() => {
 	app.listen(PORT, () => console.log(`App listening on port: ${PORT}`));
 });
